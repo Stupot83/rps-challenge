@@ -53,5 +53,10 @@ class RPSSL < Sinatra::Base
     erb :outcome
   end
 
+  post '/next-turn' do
+    Turn.turn_session = nil
+    redirect '/play'
+  end
+
   run! if app_file == $0
 end

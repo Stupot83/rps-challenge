@@ -10,4 +10,18 @@
       <h3 id="outcome_message"><%="#{@turn.winning_turn[1][0].to_s.capitalize} #{@turn.winning_turn[1][2]} #{@turn.winning_turn[1][1].to_s.capitalize}!"%></h3>
     </div>
   </div>
+
+  <div>
+    <form action="/next-turn" method="post">
+      <div>
+        <button type="submit" id="next_turn" name="next_turn">Next Turn</button>
+      </div>    
+    </form>
+
+    <form action="/" method="get">
+      <div>
+        <button type="submit" id="new_game" name="new_game">New Game</button>
+      </div>
+    </form>
+  </div>
 </div>
