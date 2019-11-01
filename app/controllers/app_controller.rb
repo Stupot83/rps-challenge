@@ -3,6 +3,7 @@ require_relative '../models/player'
 require_relative '../models/game'
 require_relative '../models/turn'
 require_relative '../models/result_calculator'
+require_relative '../models/bot'
 
 class RPSSL < Sinatra::Base
 
@@ -35,7 +36,9 @@ class RPSSL < Sinatra::Base
     if Game.game_session.players[:player_2].human == true
       redirect '/play'
     else
-      # Construct outcome page
+      player_2_turn = Bot.pick_turn
+      Turn.turn_session.end_turn(player_2_turn: player_2_turn)
+      redirect '/outcome'
     end
   end
 
