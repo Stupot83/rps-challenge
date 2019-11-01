@@ -1,6 +1,47 @@
 <div>
   <h2><%= @game.players[:player_1].name %></h2>
+
+  <form class="turn-form" action="/p1_turn" method="post">
+    
+    <label for='rock'>Rock</label>
+    <input name="p1_choice" type="radio" value="rock">
+
+    <label for='paper'>Paper</label>
+    <input name="p1_choice" type="radio" value="paper">
+
+    <label for='scissors'>Scissors</label>
+    <input name="p1_choice" type="radio" value="scissors">
+
+    <label for='spock'>Spock</label>
+    <input name="p1_choice" type="radio" value="spock">
+
+    <label for='lizard'>Lizard</label>
+    <input name="p1_choice" type="radio" value="lizard">
+
+    <button type="submit" id="p1_turn" name="p1_turn">Choose turn</button>
+  </form>
 </div>
+
 <div>
   <h2><%= @game.players[:player_2].name %></h2>
+
+  <form class="turn-form" action="/p2_turn" method="post">
+    
+    <label for='rock'>Rock</label>
+    <input name="p2_choice" type="radio" value="rock">
+
+    <label for='paper'>Paper</label>
+    <input name="p2_choice" type="radio" value="paper">
+
+    <label for='scissors'>Scissors</label>
+    <input name="p2_choice" type="radio" value="scissors">
+
+    <label for='spock'>Spock</label>
+    <input name="p2_choice" type="radio" value="spock">
+
+    <label for='lizard'>Lizard</label>
+    <input name="p2_choice" type="radio" value="lizard">
+
+    <button type="submit" id="p2_turn" name="p2_turn">Choose turn</button>
+  </form>
 </div>

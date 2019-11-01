@@ -13,7 +13,7 @@ describe Game do
     end
   end
 
-  describe "#game_instance" do
+  describe "#game_session" do
     it "has the latest game instance" do
       game_one = Game.new(player_1: player_1, player_2: player_2)
       expect(game_class.game_session).to eq game_one
