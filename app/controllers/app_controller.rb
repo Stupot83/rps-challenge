@@ -44,5 +44,11 @@ class RPSSL < Sinatra::Base
     redirect '/outcome'
   end
 
+  get '/outcome' do
+    @turn = Turn.turn_session
+    @game = Game.game_session
+    erb :outcome
+  end
+
   run! if app_file == $0
 end
